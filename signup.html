@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMPLIPIE | Sign Up</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="shortcut icon" href="images-icons/π-removebg-preview-removebg-preview.png" type="image/x-icon">
+</head>
+
+<style>
+  #white-btn:hover {
+      transform: scale(1.2);
+      background-color: white;
+      border-color: white;
+  }
+  #feature:hover{
+    background-color: #0097B2;
+    border-radius: .5rem;
+  }
+
+ .navbar-nav .nav-item:hover .nav-link {
+  color: white;
+  }
+
+</style>
+
+<body style="background: #cdecec;">
+    
+ <header>
+    <nav class="navbar navbar-expand-lg" aria-label="Thirteenth navbar example" style="background-image: linear-gradient(to right, #0097B2 , #7ED957);">
+      <div class="container-fluid">
+        <img src="images-icons/π-removebg-preview-removebg-preview.png" class="img-fluid" width="50" height="50">
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-lg-flex" id="navbarsExample11">
+          <a class="navbar-brand col-lg-3 me-0 d-none d-lg-block" href="#"></a>
+          <ul class="navbar-nav col-lg-5 justify-content-lg-center ps-2 py-2">
+            <li class="nav-item">
+              <a class="nav-link active" href="index_bootsrap.html" style="font-weight: 500;">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="index_bootsrap.html#FAQ" style="font-weight: 500;">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="index_bootsrap.html#Contact" style="font-weight: 500;">Contact</a>
+            </li>
+          </ul>
+          <div class="d-lg-flex col-lg-4 justify-content-end">
+            <form class="me-lg-2 d-flex" onsubmit="handleSearch(event)">
+              <input class="form-control" id="searchInput" type="search" placeholder="Search" aria-label="Search" disabled>
+              <button class="btn btn-outline-light ms-2 me-4" type="submit" disabled>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg>
+              </button>
+              
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-light ms-lg-2" style="color: #7ED957;" id="white-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Login
+               </button>
+              <!-- Modal -->
+               <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                 <div class="modal-dialog modal-dialog-centered">
+                   <div class="modal-content pb-4">
+                     <div class="modal-header">
+                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                     </div>
+                     <div class="modal-body text-center px-5"> <!-- Use text-center to center text content -->
+                      <h2 class="pb-4" id="exampleModalLabel"><b>Login Form</b></h2>
+                     <div class="pb-3"><input class="form-control" type="email" name="" id="email" placeholder="Email"></div>
+                     <div class="pb-3"><input class="form-control" type="password" name="" id="pass"  placeholder="Password"></div>
+                     <a href="forget_pass.html" style="text-decoration: none; color: #00BF63;"><h5>Forget Password</h5></a>
+                    </div>
+                     <div class="modal-footer justify-content-center pt-4"> <!-- Use justify-content-center to center footer buttons -->
+                       <button type="button" class="btn btn-primary" onclick = "checkLogin()">Login</button>
+                     </div>
+                     <h5 class="container-fluid text-center">Not a member? <a href="signup.html" style="text-decoration: none; color: #00BF63;">Signup now</a></h5>
+                   </div>
+                 </div>
+               </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section id="Sign up" class="px-4">
+    <div class="container col-xxl-8 px-3">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-4">
+            <div class="col-12 col-lg-6 text-center px-5 pb-2"> <!-- Center the image on all screen sizes -->
+                <img src="images-icons/img2.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="800" height="500" loading="lazy">
+                <div class="text-below-image pt-4" style="text-align: start;">
+                <h3><b class="text-success">Join us</b> on this journey of discovery,</h3><h4>where we simplify the complexities of math and make learning an adventure!</h4>
+              </div>
+            </div>
+
+              <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1 p-3" style="background-color:  #8fb6bd; border-radius: .5rem;">
+
+                <p class="text-center h1 fw-bold mb-4">Sign up</p>
+
+                <form class="px-4">
+
+                  <div class="d-flex flex-row align-items-center mb-2">
+                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="text" id="nameReg" class="form-control">
+                      <label class="form-label" for="form3Example1c" style="margin-left: 0px;">Your Name</label>
+                    <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 71.2px;"></div><div class="form-notch-trailing"></div></div></div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-2">
+                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="email" id="emailReg" class="form-control">
+                      <label class="form-label" for="form3Example3c" style="margin-left: 0px;">Your Email</label>
+                    <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68.8px;"></div><div class="form-notch-trailing"></div></div></div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-2">
+                    <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="password" id="passReg" class="form-control">
+                      <label class="form-label" for="form3Example4c" style="margin-left: 0px;">Password</label>
+                    <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 64.8px;"></div><div class="form-notch-trailing"></div></div></div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-2">
+                    <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="password" id="repeatReg" class="form-control">
+                      <label class="form-label" for="form3Example4cd" style="margin-left: 0px;">Repeat your password</label>
+                    <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 134.4px;"></div><div class="form-notch-trailing"></div></div></div>
+                  </div>
+
+                  <div class="form-check d-flex justify-content-center mb-4">
+                    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c">
+                    <label class="form-check-label" for="form2Example3">
+                      I agree all statements in <a href="About.html#Terms">Terms of service</a>
+                    </label>
+                  </div>
+
+                  <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                    <button onclick="register()" type="button" class="btn btn-dark btn-lg">Register</button>
+                  </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+  </section>
+
+
+
+
+  <footer style="background-image: linear-gradient(to right, #0097B2 , #7ED957);">
+    <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-center py-3">
+          <div class="col-md-4 d-flex align-items-center">
+              <img class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1" src="images-icons/π-removebg-preview-removebg-preview.png" class="img-fluid" width="35" height="35">
+            <span class="mb-3 mb-md-0 text-muted">© 2023 SIMPLIPIE</span>
+          </div>
+      
+          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-muted" target="blank" href="https://twitter.com/bustillo_j10879"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+              </svg></a></li>
+            <li class="ms-3"><a class="text-muted" target="blank" href="https://www.instagram.com/pintagur0/?fbclid=IwAR1xI_W9kQH7q1X5n0J0sejQKlCQZDk3xiL0H7V_NjOVe7xsciqYzMmulJU"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+              </svg></a></li>
+            <li class="ms-3"><a class="text-muted" target="blank" href="https://www.facebook.com/jirehben.lagumbaybustillo/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+              </svg></a></li>
+          </ul>
+        </div>
+      </div>
+  </footer>
+
+  <script>
+    function checkLogin() {
+      // Get the input elements by their IDs
+      var emailInput = document.getElementById("email");
+      var passwordInput = document.getElementById("pass");
+                            
+      // Get the values of the inputs
+      var emailValue = emailInput.value;
+      var passwordValue = passwordInput.value;
+                            
+      // Check if email and password match the expected values
+      if (emailValue === "admin" && passwordValue === "181306") {
+      alert("Login successful!");
+      window.location.href = "admin.html";
+      // You can redirect to another page or perform other actions here
+      }
+      else if (emailValue === "client" && passwordValue === "181306") {
+      alert("Login successful!");
+      window.location.href = "client_home.html";
+
+      } else {
+      alert("Invalid email or password. Please try again.");
+      }
+    }                            
+  </script>  
+
+<script>
+  function register() {
+    // Get the input elements by their IDs
+    var emailInput = document.getElementById("emailReg");
+    var nameInput = document.getElementById("nameReg");
+    var passInput = document.getElementById("passReg");
+    var repeatInput = document.getElementById("repeatReg");
+    const regex = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
+
+                          
+    // Get the values of the inputs
+    var emailValue = emailInput.value;
+    var passValue = passInput .value;
+    var repeatValue = repeatInput.value;
+    var nameValue = nameInput.value;
+                          
+    // Check if email and password match the expected values
+    if (emailValue === "" && repeatValue === "" && nameValue === "" && passValue ==="") {
+    alert("Please fill the required fields.");   
+    }    
+    else if(regex.test(emailValue) && passValue != "" && nameValue != "" && repeatValue != "") {
+    alert("You are now registered")
+    } else if(regex.test(emailValue) && passValue === "") {
+    alert("Please input your password.")
+    }
+    else if(regex.test(emailValue) == false && passValue != "" && nameValue != "" && repeatValue != "") {
+    alert("Please input a valid email.")
+    }else{
+      alert("Please fill the required fields.")
+    }
+  }
+</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMPLIPIE | Landing page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="shortcut icon" href="images-icons/π-removebg-preview-removebg-preview.png" type="image/x-icon">
+</head>
+
+<style>
+  #white-btn:hover {
+      transform: scale(1.2);
+      background-color: white;
+      border-color: white;
+  }
+  #feature:hover{
+    background-color: #0097B2;
+    border-radius: .5rem;
+  }
+
+ .navbar-nav .nav-item:hover .nav-link {
+  color: white;
+  }
+
+  .animate-card {
+    opacity: 0;
+    transition: opacity .75s ease;
+ }
+
+.animate-card.show {
+    opacity: 1;
+}
+
+</style>
+
+<body style="background: #cdecec;">
+    
+ <header>
+  <nav class="navbar navbar-expand-lg" aria-label="Thirteenth navbar example" style="background-image: linear-gradient(to right, #0097B2 , #7ED957);">
+    <div class="container-fluid">
+      <img src="images-icons/π-removebg-preview-removebg-preview.png" class="img-fluid" width="50" height="50">
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse d-lg-flex" id="navbarsExample11">
+        <a class="navbar-brand col-lg-3 me-0 d-none d-lg-block" href="#"></a>
+        <ul class="navbar-nav col-lg-5 justify-content-lg-center ps-2 py-2">
+          <li class="nav-item">
+            <a class="nav-link active" href="#About" style="font-weight: 500;">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#Contact" style="font-weight: 500;">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#FAQ" style="font-weight: 500;">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#Features" style="font-weight: 500;">Features</a>
+          </li>
+        </ul>
+        <div class="d-lg-flex col-lg-4 justify-content-end">
+          <form class="me-lg-2 d-flex" onsubmit="handleSearch(event)">
+            <input class="form-control" id="searchInput" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light ms-2 me-4" type="submit">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+              </svg>
+            </button>
+            
+            <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-light ms-lg-2" style="color: #7ED957;" id="white-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                     Login
+                    </button>
+           <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content pb-4">
+                          <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body text-center px-5"> <!-- Use text-center to center text content -->
+                            <h2 class="pb-4" id="exampleModalLabel"><b>Login Form</b></h2>
+                           <div class="pb-3"><input class="form-control" type="email" name="" id="email" placeholder="Email"></div>
+                           <div class="pb-3"><input class="form-control" type="password" name="" id="pass"  placeholder="Password"></div>
+                           <a href="forget_pass.html" style="text-decoration: none; color: #00BF63;"><h5>Forget Password</h5></a>
+                          </div>
+                          <div class="modal-footer justify-content-center pt-4"> <!-- Use justify-content-center to center footer buttons -->
+                            <button type="button" class="btn btn-primary" onclick = "checkLogin()">Login</button>
+                          </div>
+                          <h5 class="container-fluid text-center">Not a member? <a href="signup.html" style="text-decoration: none; color: #00BF63;">Signup now</a></h5>
+                        </div>
+                      </div>
+                    </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+  
+    <section>
+      <div class="container col-xxl-8 px-4 py-5">
+          <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+              <div class="col-12 col-lg-6 text-center"> <!-- Center the image on all screen sizes -->
+                  <img src="images-icons/img2.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="800" height="500" loading="lazy">
+              </div>
+              <div class="col-lg-6">
+                  <h1 class="display-5 fw-bold lh-1 mb-3">Welcome to <span style="color: #00BF63;">SIMPLIPIE</span></h1>
+                  <h2>Mathematics in Simplest Form</h2>
+                  <p class="lead" style="font-weight:400;">Empower your math understanding with SIMPLIPIE, simplifying complex concepts for easy comprehension.</p>
+                  <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                      <button type="button" class="btn btn-success btn-lg px-4 me-md-2"  data-bs-toggle="modal" data-bs-target="#exampleModal">Get started</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+   
+    <section class="animate-card" id = "Features" style="background-color: #A8DEDE;">
+        <div class="container px-4 py-5" id="hanging-icons">
+          <div class="d-flex justify-content-md-start align-items-center pb-3">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
+                  <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+                  </svg>
+              </div>
+            <h2 class="pt-1 px-1">Features</h2>
+          </div>
+            <div class="row g-1 py-1 row-cols-1 row-cols-lg-3" >
+              <div  id="feature" class="col d-flex align-items-start" style="padding: 20px;">
+                <div class="icon-square text-dark flex-shrink-0 me-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-puzzle-fill" viewBox="0 0 16 16">
+                        <path d="M3.112 3.645A1.5 1.5 0 0 1 4.605 2H7a.5.5 0 0 1 .5.5v.382c0 .696-.497 1.182-.872 1.469a.459.459 0 0 0-.115.118.113.113 0 0 0-.012.025L6.5 4.5v.003l.003.01c.004.01.014.028.036.053a.86.86 0 0 0 .27.194C7.09 4.9 7.51 5 8 5c.492 0 .912-.1 1.19-.24a.86.86 0 0 0 .271-.194.213.213 0 0 0 .036-.054l.003-.01v-.008a.112.112 0 0 0-.012-.025.459.459 0 0 0-.115-.118c-.375-.287-.872-.773-.872-1.469V2.5A.5.5 0 0 1 9 2h2.395a1.5 1.5 0 0 1 1.493 1.645L12.645 6.5h.237c.195 0 .42-.147.675-.48.21-.274.528-.52.943-.52.568 0 .947.447 1.154.862C15.877 6.807 16 7.387 16 8s-.123 1.193-.346 1.638c-.207.415-.586.862-1.154.862-.415 0-.733-.246-.943-.52-.255-.333-.48-.48-.675-.48h-.237l.243 2.855A1.5 1.5 0 0 1 11.395 14H9a.5.5 0 0 1-.5-.5v-.382c0-.696.497-1.182.872-1.469a.459.459 0 0 0 .115-.118.113.113 0 0 0 .012-.025L9.5 11.5v-.003l-.003-.01a.214.214 0 0 0-.036-.053.859.859 0 0 0-.27-.194C8.91 11.1 8.49 11 8 11c-.491 0-.912.1-1.19.24a.859.859 0 0 0-.271.194.214.214 0 0 0-.036.054l-.003.01v.002l.001.006a.113.113 0 0 0 .012.025c.016.027.05.068.115.118.375.287.872.773.872 1.469v.382a.5.5 0 0 1-.5.5H4.605a1.5 1.5 0 0 1-1.493-1.645L3.356 9.5h-.238c-.195 0-.42.147-.675.48-.21.274-.528.52-.943.52-.568 0-.947-.447-1.154-.862C.123 9.193 0 8.613 0 8s.123-1.193.346-1.638C.553 5.947.932 5.5 1.5 5.5c.415 0 .733.246.943.52.255.333.48.48.675.48h.238l-.244-2.855z"/>
+                      </svg>
+                </div>
+                <div>
+                  <h4>Personalized Learning Paths</h4>
+                  <p>SIMPLIPIE tailors unique study plans, analyzing your needs and offering specific learning tasks, ensuring personalized and effective study guidance.</p>
+                  <a href="About.html#feature-1" class="btn btn-dark" target="_blank">
+                    Read more
+                  </a>
+                </div>
+              </div>
+              <div id="feature" class="col d-flex align-items-start"  style="padding: 20px;">
+                <div class="icon-square text-dark flex-shrink-0 me-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-speedometer" viewBox="0 0 16 16">
+                        <path d="M8 2a.5.5 0 0 1 .5.5V4a.5.5 0 0 1-1 0V2.5A.5.5 0 0 1 8 2zM3.732 3.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 8a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 7.31A.91.91 0 1 0 8.85 8.569l3.434-4.297a.389.389 0 0 0-.029-.518z"/>
+                        <path fill-rule="evenodd" d="M6.664 15.889A8 8 0 1 1 9.336.11a8 8 0 0 1-2.672 15.78zm-4.665-4.283A11.945 11.945 0 0 1 8 10c2.186 0 4.236.585 6.001 1.606a7 7 0 1 0-12.002 0z"/>
+                      </svg>
+                </div>
+                <div>
+                  <h4>Real-Time Performance Analytics</h4>
+                  <p>SIMPLIPIE swiftly assesses your performance, providing instant, personalized feedback that highlights strengths and pinpoints areas for improvement with precision.</p>
+                  <a href="About.html#feature-2" class="btn btn-dark" target="_blank">
+                    Read more
+                  </a>
+                </div>
+              </div>
+              <div id="feature" class="col d-flex align-items-start"  style="padding: 20px;">
+                <div class="icon-square text-dark flex-shrink-0 me-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-unlock-fill" viewBox="0 0 16 16">
+                        <path d="M11 1a2 2 0 0 0-2 2v4a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h5V3a3 3 0 0 1 6 0v4a.5.5 0 0 1-1 0V3a2 2 0 0 0-2-2z"/>
+                      </svg>
+                </div>
+                <div>
+                  <h4>Unlockable Topic Advancement</h4>
+                  <p>In SIMPLIPIE, success in a lesson unlocks new learning opportunities, creating a game-like experience where you earn and progress through levels.</p>
+                  <a href="About.html#feature-3" class="btn btn-dark" target="_blank">
+                    Read more
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+
+
+    <section id="FAQ" style="background-color:#8fb6bd;" >
+
+          <div class="container px-4 py-5" id="hanging-icons">
+              <div class="d-flex justify-content-md-start align-items-center pb-3 animate-card">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-question-circle-fill" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
+                    </svg>
+                </div>
+                <h2 class="pt-1 px-1">FAQ</h2>
+              </div>
+
+            <section class="my-3 animate-card" id="accordion">
+              <div class="px-2">
+                <div class="bd-example">
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h4 class="accordion-header" id="headingOne">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        How does SIMPLIPIE reward success in lessons?
+                      </button>
+                    </h4>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <strong>Embarking on a learning journey with SIMPLIPIE </strong> is akin to entering a dynamic game, where each achievement in a lesson unlocks new levels of educational exploration. Success isn't just a milestone; it's a gateway to expanded horizons, introducing users to fresh challenges and insights. Much like progressing through levels in a game, each lesson conquered on SIMPLIPIE unveils additional layers of knowledge, transforming the educational experience into a captivating and rewarding adventure. Through this innovative approach, users find themselves not only mastering concepts but also discovering the joy of continual growth and intellectual achievement.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h4 class="accordion-header" id="headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Is  SIMPLIPIE suitable for all skill levels?
+                      </button>
+                    </h4>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <strong>SIMPLIPIE is designed for learners of all levels.</strong> SIMPLIPIE has been meticulously crafted to cater to learners at every stage of their educational journey, ensuring inclusivity for individuals of all proficiency levels. This personalized approach tailors the learning experience to the unique needs and strengths of each user, fostering a sense of individualized growth and comprehension. By embracing a diverse range of learners, SIMPLIPIE transforms education into an engaging and dynamic process, allowing users to navigate through content at their own pace. With a commitment to providing an inclusive and effective learning environment, SIMPLIPIE stands as a versatile educational tool that adapts to the diverse needs of its users.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h4 class="accordion-header" id="headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Is SIMPLIPIE like a traditional educational platform?
+                      </button>
+                    </h4>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <strong>No, it's more!</strong>  SIMPLIPIE goes beyond conventional learning methodologies by seamlessly integrating a game-like structure into its educational framework. This innovative approach not only imparts knowledge but transforms the entire learning experience into a dynamic and engaging adventure. The gamification element on SIMPLIPIE not only challenges users but also rewards their progress, making education inherently rewarding and enjoyable. By infusing an element of play, SIMPLIPIE turns the often daunting task of learning into a captivating and immersive journey, where users find joy in the pursuit of knowledge.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </section>
+
+            <div class="container col-xxl-8 animate-card">
+                <div class="row flex-lg-row-reverse align-items-center">
+                    <div class="col-12 col-lg-6">
+                            <section class=" text-bg-success" style="padding: 5% 10% 0 10%; border-radius: .5rem;">
+                              <h5 class="pb-3 text-center">
+                                <span class="fw-bold">
+                                  Still have any questions? <br> Contact us to get your answer!</span>
+                                </h5>
+                              <form action="" method="POST" class="faq-contact-form">
+
+                                <!-- Email input -->
+                                <div class="form-outline">
+                                  <input type="email" id="emailFaq" class="form-control" name="email" required="">
+                                  <label class="form-label pb-3" for="form4Example2" style="margin-left: 0px;">Email address</label>
+                                <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 88.8px;"></div><div class="form-notch-trailing"></div></div></div>
+
+                                <!-- Message input -->
+                                <div class="form-outline mb-4">
+                                  <textarea class="form-control" id="messFaq" rows="8" name="message" required=""></textarea>
+                                  <label class="form-label" for="form4Example3" style="margin-left: 0px;">Message</label>
+                                <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 60px;"></div><div class="form-notch-trailing"></div></div></div>
+
+                                <!-- Checkbox -->
+
+                              </form>
+                                <!-- Submit button -->
+                                <div class="text-center">
+                                <button onclick="send()" class="btn btn-dark btn-block mb-4 faq-contact-form-submit">Send</button>
+                                <input type="hidden" name="recaptcha-response" id="recaptchaFaqForm">
+                                </div>
+                            </section>
+                  </div>
+                  <div class="col-lg-6 animate-card">
+                    <article class="my-3" id="carousel">
+                        <div class="bd-example">
+                        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                          <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3" class="active" aria-current="true"></button>
+                          </div>
+                          <div class="carousel-inner" style="border-radius: .5rem;">
+                            <div class="carousel-item active">
+                              <img src="images-icons/paths.png" class="d-block w-100 img-fluid" width="400" height="400" alt="First Slide Image">
+                            </div>
+                            <div class="carousel-item">
+                              <img src="images-icons/performance.png" class="d-block w-100 img-fluid" width="400" height="400" alt="First Slide Image">
+                            </div>
+                            <div class="carousel-item">
+                              <img src="images-icons/unlock.png" class="d-block w-100 img-fluid" width="400" height="400" alt="First Slide Image">
+                            </div>
+                          </div>
+                          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                          </button>
+                        </div>
+                        </div>
+                      </article>
+                  </div>
+                </div> 
+           </div>  
+        </div>
+    </section>
+    
+    <section class="animate-card" id="About" style="background-color: #A8DEDE;">
+      <section class="px-4">
+        <div class="container -xxl-col8 px-4 py-5">
+            <div class="d-flex justify-content-md-start align-items-center pb-3">
+              <div><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+              </svg></div>
+              <h2 class="pt-1 px-1">About us</h2>
+            </div>
+            <div class="row g-4 py-2 row-cols-1 row-cols-lg-3" style="align-items: center;">
+                <div class="col-12 col-lg-6 text-center"> <!-- Center the image on small screens -->
+                    <img src="images-icons/us.png" class="img-fluid" width="450" height="450">
+                </div>
+                <div class="col-lg-6" style="padding: 40px; border-radius: .5rem; background-color:  #cdecec;">
+                    <div class="lc-block mb-3">
+                        <div editable="rich">
+                            <p class="lead" style="padding-bottom: 20px; font-weight: 600;">Welcome to SIMPLIPIE, where a passion for education meets the simplicity of learning.</p>
+                        </div>
+                    </div>
+    
+                    <div class="lc-block mb-3">
+                        <div editable="rich">
+                            <p class="lead" style="padding-bottom: 20px; font-weight: 400; font-size: medium;"> Our journey began with a simple yet profound idea: to transform the way we approach learning, particularly in the realm of mathematics. At SIMPLIPIE, we understand that each learner is unique, with individual strengths and areas for improvement. That's why we've dedicated ourselves to creating a mathematical tool that not only simplifies concepts but also adapts to your learning style. Our mission is to empower learners of all levels to embrace the beauty of mathematics without intimidation.</p>
+                        </div>
+                    </div>
+    
+                    <div class="lc-block d-grid gap-2 d-md-flex justify-content-md-start">
+                        <a class="btn btn-success px-4 me-md-2" href="About.html" role="button" target="_blank">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+   </section>
+
+  <section class="animate-card" id="Contact" class="pt-2">
+    <section class="px-4 py-5">
+        <div  class="container col-xxl-8" style="padding: 20px 40px 20px 40px; border-radius: .5rem; background-color: #8fb6bd;" >
+          
+          <section class="section-preview">
+      
+            <!--Section: Contact v.2-->
+            <section class="mb-4">
+      
+                <!--Section heading-->
+                <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
+                <!--Section description-->
+                <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
+                    a matter of hours to help you.</p>
+      
+                <div class="row">
+      
+                    <!--Grid column-->
+                    <div class="col-md-9 mb-md-0 mb-5">
+                        <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+      
+                            <!--Grid row-->
+                            <div class="row">
+      
+                                <!--Grid column-->
+                                <div class="col-md-6">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="nameContact" name="name" class="form-control">
+                                        <label for="name" class="pb-3">Your name</label>
+                                    </div>
+                                </div>
+                                <!--Grid column-->
+      
+                                <!--Grid column-->
+                                <div class="col-md-6">
+                                    <div class="md-form mb-0">
+                                        <input type="email" id="emailContact" name="email" class="form-control">
+                                        <label for="email" class="pb-3">Your email</label>
+                                    </div>
+                                </div>
+                                <!--Grid column-->
+      
+                            </div>
+                            <!--Grid row-->
+      
+                            <!--Grid row-->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="subjectContact" name="subject" class="form-control">
+                                        <label for="subject" class="pb-3">Subject</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Grid row-->
+      
+                            <!--Grid row-->
+                            <div class="row">
+      
+                                <!--Grid column-->
+                                <div class="col-md-12">
+      
+                                    <div class="md-form">
+                                        <textarea type="text" id="messageContact" name="message" rows="2" class="form-control md-textarea"></textarea>
+                                        <label for="message" class="pb-3">Your message</label>
+                                    </div>
+      
+                                </div>
+                            </div>
+                            <!--Grid row-->
+      
+                        </form>
+      
+                        <div class="text-center text-md-left">
+                            <a class="btn btn-dark waves-effect waves-light" onclick="sendContact()">Send</a>
+                        </div>
+                        <div id="status"></div>
+                    </div>
+                    <!--Grid column-->
+      
+                    <!--Grid column-->
+                    <div class="col-md-3 text-center">
+                        <ul class="list-unstyled mb-0">
+                            <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                              </svg>
+                                <p>Sta.Barbara, Pangasinan, Philippines</p>
+                            </li>
+      
+                            <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                              </svg>
+                                <p>+ 63 938 811 7145</p>
+                            </li>
+      
+                            <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                              </svg>
+                                <p>bustillojireh1@gmail.com</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+      
+                </div>
+      
+            </section>
+            <!--Section: Contact v.2-->
+
+          </section>
+          
+        </div>
+
+      </section>
+
+    </section>
+
+    <footer style="background-image: linear-gradient(to right, #0097B2 , #7ED957);">
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-between align-items-center py-3">
+              <div class="col-md-4 d-flex align-items-center">
+                  <img class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1" src="images-icons/π-removebg-preview-removebg-preview.png" class="img-fluid" width="35" height="35">
+                <span class="mb-3 mb-md-0 text-muted">© 2023 SIMPLIPIE</span>
+              </div>
+          
+              <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a class="text-muted" target="blank" href="https://twitter.com/bustillo_j10879"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                  </svg></a></li>
+                <li class="ms-3"><a class="text-muted" target="blank" href="https://www.instagram.com/pintagur0/?fbclid=IwAR1xI_W9kQH7q1X5n0J0sejQKlCQZDk3xiL0H7V_NjOVe7xsciqYzMmulJU"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                  </svg></a></li>
+                <li class="ms-3"><a class="text-muted" target="blank" href="https://www.facebook.com/jirehben.lagumbaybustillo/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                  </svg></a></li>
+              </ul>
+            </div>
+          </div>
+    </footer>
+
+    <script>
+      function checkLogin() {
+        // Get the input elements by their IDs
+        var emailInput = document.getElementById("email");
+        var passwordInput = document.getElementById("pass");
+                              
+        // Get the values of the inputs
+        var emailValue = emailInput.value;
+        var passwordValue = passwordInput.value;
+                              
+        // Check if email and password match the expected values
+        if (emailValue === "admin" && passwordValue === "181306") {
+        alert("Login successful!");
+        window.location.href = "admin.html";
+        // You can redirect to another page or perform other actions here
+        }
+        else if (emailValue === "client" && passwordValue === "181306") {
+        alert("Login successful!");
+        window.location.href = "client_home.html";
+
+        } else {
+        alert("Invalid email or password. Please try again.");
+        }
+      }                            
+    </script> 
+    
+    <script>
+      function send() {
+        // Get the input elements by their IDs
+        var emailInput = document.getElementById("emailFaq");
+        var messInput = document.getElementById("messFaq");
+        const regex = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
+     
+                              
+        // Get the values of the inputs
+        var emailValue = emailInput.value;
+        var messValue = messInput.value;
+                              
+        // Check if email and password match the expected values
+        if (emailValue === "" && messValue === "" ) {
+        alert("Please input your email and message.");   
+        }    
+        else if(regex.test(emailValue) && messValue != "") {
+        alert("Message sent.")
+        } else if(regex.test(emailValue) && messValue === "") {
+         alert("Please input your message.")
+        }
+        else{
+          alert("Please input a valid email.")
+        }
+      }
+      
+    </script>
+
+    <script>
+      function sendContact() {
+        // Get the input elements by their IDs
+        var emailInput = document.getElementById("emailContact");
+        var messInput = document.getElementById("messageContact");
+        var nameInput = document.getElementById("nameContact");
+        var subInput = document.getElementById("subjectContact");
+        const regex = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
+    
+                              
+        // Get the values of the inputs
+        var emailValue = emailInput.value;
+        var messValue = messInput.value;
+        var subValue = subInput.value;
+        var nameValue = nameInput.value;
+                              
+        // Check if email and password match the expected values
+        if (emailValue === "" && messValue === "" && nameValue === "" && subValue ==="") {
+        alert("Please fill the required fields.");   
+        }    
+        else if(regex.test(emailValue) && messValue != "" && nameValue != "" && subValue != "") {
+        alert("Message sent...")
+        } else if(regex.test(emailValue) && messValue === "") {
+        alert("Please input your message.")
+        }
+        else{
+          alert("Please fill the required fields.")
+        }
+      }
+    </script>
+
+<script>
+  function handleSearch(event) {
+    
+      event.preventDefault(); // Prevents the default form submission
+
+      // Get the input element by its ID
+      var searchInput = document.getElementById("searchInput");
+
+      // Get the value of the input
+      var searchValue = searchInput.value.toLowerCase(); // Convert to lowercase for case-insensitive comparison
+
+      // Define the sections and their corresponding IDs
+      var sectionMappings = {
+          "about": "About",
+          "contact": "Contact",
+          "faq":"FAQ",
+          "features": "Features"
+          // Add more mappings for other sections as needed
+      };
+
+      // Check if the search value corresponds to a section
+      if (sectionMappings.hasOwnProperty(searchValue)) {
+          // Redirect to the section using the section's ID
+          var sectionId = sectionMappings[searchValue];
+          document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+      } else {
+          // Handle the case when no match is found (optional)
+          alert("No matching section found for: " + searchValue);
+      }
+  }
+</script>
+
+    <script src="Animation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

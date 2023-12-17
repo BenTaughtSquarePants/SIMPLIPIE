@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMPLIPIE | Sources</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="shortcut icon" href="images-icons/π-removebg-preview-removebg-preview.png" type="image/x-icon">
+</head>
+
+<style>
+  #white-btn:hover {
+      transform: scale(1.2);
+      background-color: white;
+      border-color: white;
+  }
+  #feature:hover{
+    background-color: #0097B2;
+    border-radius: .5rem;
+  }
+
+ .navbar-nav .nav-item:hover .nav-link {
+  color: white;
+  }
+  .navbar-nav .nav-item:hover svg  {
+  fill: white;
+  }
+  .animate-card {
+    opacity: 0;
+    transition: opacity .75s ease;
+  }
+
+  .animate-card.show {
+      opacity: 1;
+  }
+
+  
+
+</style>
+
+<body style="background: #cdecec;">
+    
+  <header>
+    <nav class="navbar navbar-expand-lg" aria-label="Thirteenth navbar example" style="background-image: linear-gradient(to right, #0097B2 , #7ED957);">
+      <div class="container-fluid">
+        <img src="images-icons/π-removebg-preview-removebg-preview.png" class="img-fluid" width="50" height="50">
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-lg-flex justify-content-between" id="navbarsExample11">
+          <a class="navbar-brand col-lg-3 me-0 d-none d-lg-block" href="#"></a>
+          <ul class="navbar-nav d-lg-none col-lg-5 ps-2 pt-2 pb-3">
+            <li class="nav-item d-flex align-items-center">
+              <svg width="20" height="20" viewBox="0 0 15 15" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.5 0.5L7.8254 0.120372C7.63815 -0.0401239 7.36185 -0.0401239 7.1746 0.120372L7.5 0.5ZM0.5 6.5L0.174604 6.12037L0 6.27003V6.5H0.5ZM5.5 14.5V15C5.77614 15 6 14.7761 6 14.5H5.5ZM9.5 14.5H9C9 14.7761 9.22386 15 9.5 15V14.5ZM14.5 6.5H15V6.27003L14.8254 6.12037L14.5 6.5ZM1.5 15H5.5V14H1.5V15ZM14.8254 6.12037L7.8254 0.120372L7.1746 0.879628L14.1746 6.87963L14.8254 6.12037ZM7.1746 0.120372L0.174604 6.12037L0.825396 6.87963L7.8254 0.879628L7.1746 0.120372ZM6 14.5V11.5H5V14.5H6ZM9 11.5V14.5H10V11.5H9ZM9.5 15H13.5V14H9.5V15ZM15 13.5V6.5H14V13.5H15ZM0 6.5V13.5H1V6.5H0ZM7.5 10C8.32843 10 9 10.6716 9 11.5H10C10 10.1193 8.88071 9 7.5 9V10ZM7.5 9C6.11929 9 5 10.1193 5 11.5H6C6 10.6716 6.67157 10 7.5 10V9ZM13.5 15C14.3284 15 15 14.3284 15 13.5H14C14 13.7761 13.7761 14 13.5 14V15ZM1.5 14C1.22386 14 1 13.7761 1 13.5H0C0 14.3284 0.671573 15 1.5 15V14Z"/>
+              </svg>
+              <a class="nav-link active ps-1" href="admin.html" style="font-weight: 500;">Dashboard</a>
+            </li>
+            <li class="nav-item d-flex align-items-center">
+              <svg fill="#000000" width="20" height="20" viewBox="0 0 1920 1920"  xmlns="http://www.w3.org/2000/svg">
+                <path d="M1892.1 374.226 1517.874 0 1143.76 374.226l78.884 78.884 239.442-239.442v478.996c0 191.464-116.596 261.534-251.715 342.65-91.604 54.895-190.349 114.923-250.377 216.904-59.916-101.98-158.66-162.009-250.265-216.904-135.118-81.116-251.827-151.186-251.827-342.65V213.668L697.456 453.11l78.884-78.884L402.114 0 28 374.226l78.884 78.884 239.442-239.442v478.996c0 254.728 162.678 352.245 306.165 438.27 135.118 81.116 251.715 151.186 251.715 342.762V1920h111.576v-446.304c0-191.576 116.709-261.646 251.827-342.762 143.487-86.025 306.053-183.542 306.053-438.27V213.668l239.554 239.442 78.884-78.884Z" fill-rule="evenodd"/>
+              </svg>
+              <a class="nav-link active ps-1" href="admin_paths.html" style="font-weight: 500;">Paths</a>
+            </li>
+            <li class="nav-item d-flex align-items-center">
+              <svg fill="#000000" width="20" height="20" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1750.21 0v1468.235h-225.882v338.824h169.412V1920H451.387c-82.447 0-161.506-36.141-214.701-99.388-43.934-51.953-67.652-116.33-67.652-182.965V282.353C169.034 126.494 295.528 0 451.387 0H1750.21Zm-338.823 1468.235H463.81c-89.223 0-166.136 59.86-179.576 140.047-1.242 9.036-2.259 18.07-2.259 27.106v2.26c0 40.658 13.553 77.928 40.659 109.552 32.753 38.4 79.059 59.859 128.753 59.859h960v-112.941H409.599v-112.942h1001.788v-112.94Zm225.882-1355.294H451.387c-92.725 0-169.412 75.67-169.412 169.412v1132.8c50.824-37.27 113.958-59.859 181.835-59.859h1173.46V112.941ZM1354.882 903.53v112.942H564.294V903.529h790.588Zm56.47-564.705v451.764H507.825V338.824h903.529Zm-112.94 112.94H620.765v225.883h677.647V451.765Z" fill-rule="evenodd"/>
+            </svg>
+              <a class="nav-link active ps-1" href="admin_sources.html" style="font-weight: 500;">Sources</a>
+            </li>
+            <li class="nav-item d-flex align-items-center">
+              <svg fill="#000000" width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,11A5,5,0,1,0,7,6,5.006,5.006,0,0,0,12,11Zm0-8A3,3,0,1,1,9,6,3,3,0,0,1,12,3ZM3,22V18a5.006,5.006,0,0,1,5-5h8a5.006,5.006,0,0,1,5,5v4a1,1,0,0,1-2,0V18a3,3,0,0,0-3-3H8a3,3,0,0,0-3,3v4a1,1,0,0,1-2,0Z"/></svg>
+              <a class="nav-link active ps-1" href="admin_profile.html" style="font-weight: 500;">Profile</a>
+            </li>
+            <li class="nav-item d-flex align-items-center">
+              <svg width="20" height="20" viewBox="0 0 1024 1024" class="icon"  version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><path d="M415.808 755.2L512 851.392 608.192 755.2H883.2V204.8H704V128h256v704h-320l-128 128-128-128H64V128h256v76.8H140.8v550.4h275.008zM473.6 64h76.8v448H473.6V64z m0 512h76.8v76.8H473.6V576z" /></svg>
+              <a class="nav-link active ps-1" href="admin_feedback.html" style="font-weight: 500;">Feedback</a>
+            </li>
+          </ul>
+          <div class="d-lg-flex col-lg-4 justify-content-end">
+            <form class="me-lg-2 d-flex">
+              <input class="form-control" type="search" placeholder="Search" aria-label="Search" disabled>
+              <button class="btn btn-outline-light ms-2 me-4" type="submit" disabled>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg>
+              </button>
+              <button type="button" class="btn btn-light ms-lg-2" style="color: #7ED957;" id="white-btn" onclick="logout()">
+                Logout
+              </button>   
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+    
+
+      <button class="btn btn-success position-fixed end-0 bottom-0 m-3 shadow" style="z-index: 1;" type="button" data-bs-toggle="modal" data-bs-target="#addChapterModal">
+      +
+      </button>
+
+      <div class="modal fade" id="addChapterModal" tabindex="-1" aria-labelledby="addChapterModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="addChapterModalLabel">Add Chapter</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form id="addChapterForm">
+                <div class="mb-3">
+                  <label for="chapterTitle" class="form-label">Chapter Title</label>
+                  <input type="text" class="form-control" id="chapterTitle" required>
+                </div>
+                <div class="mb-3">
+                  <label for="chapterDescription" class="form-label">Chapter Description</label>
+                  <textarea class="form-control" id="chapterDescription" rows="3" required></textarea>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary" onclick="addChapter()">Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-md-2 d-none d-md-block text-bg-light" id="sidebar">
+          <div class="sidebar-sticky">
+            <ul class="nav flex-column pt-3">
+              <li class="nav-item" >
+                <a class="nav-link active" href="admin.html" style="color: black;">
+                  <svg width="24" height="24" viewBox="0 0 15 15" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.5 0.5L7.8254 0.120372C7.63815 -0.0401239 7.36185 -0.0401239 7.1746 0.120372L7.5 0.5ZM0.5 6.5L0.174604 6.12037L0 6.27003V6.5H0.5ZM5.5 14.5V15C5.77614 15 6 14.7761 6 14.5H5.5ZM9.5 14.5H9C9 14.7761 9.22386 15 9.5 15V14.5ZM14.5 6.5H15V6.27003L14.8254 6.12037L14.5 6.5ZM1.5 15H5.5V14H1.5V15ZM14.8254 6.12037L7.8254 0.120372L7.1746 0.879628L14.1746 6.87963L14.8254 6.12037ZM7.1746 0.120372L0.174604 6.12037L0.825396 6.87963L7.8254 0.879628L7.1746 0.120372ZM6 14.5V11.5H5V14.5H6ZM9 11.5V14.5H10V11.5H9ZM9.5 15H13.5V14H9.5V15ZM15 13.5V6.5H14V13.5H15ZM0 6.5V13.5H1V6.5H0ZM7.5 10C8.32843 10 9 10.6716 9 11.5H10C10 10.1193 8.88071 9 7.5 9V10ZM7.5 9C6.11929 9 5 10.1193 5 11.5H6C6 10.6716 6.67157 10 7.5 10V9ZM13.5 15C14.3284 15 15 14.3284 15 13.5H14C14 13.7761 13.7761 14 13.5 14V15ZM1.5 14C1.22386 14 1 13.7761 1 13.5H0C0 14.3284 0.671573 15 1.5 15V14Z"/>
+                  </svg>
+                  Dashboard
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="admin_paths.html" style="color: black;">
+                  <svg fill="#000000" width="24" height="24" viewBox="0 0 1920 1920"  xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1892.1 374.226 1517.874 0 1143.76 374.226l78.884 78.884 239.442-239.442v478.996c0 191.464-116.596 261.534-251.715 342.65-91.604 54.895-190.349 114.923-250.377 216.904-59.916-101.98-158.66-162.009-250.265-216.904-135.118-81.116-251.827-151.186-251.827-342.65V213.668L697.456 453.11l78.884-78.884L402.114 0 28 374.226l78.884 78.884 239.442-239.442v478.996c0 254.728 162.678 352.245 306.165 438.27 135.118 81.116 251.715 151.186 251.715 342.762V1920h111.576v-446.304c0-191.576 116.709-261.646 251.827-342.762 143.487-86.025 306.053-183.542 306.053-438.27V213.668l239.554 239.442 78.884-78.884Z" fill-rule="evenodd"/>
+                </svg>
+                  Paths
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="admin_sources.html">
+                  <svg fill="#0000FF" width="24" height="24" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1750.21 0v1468.235h-225.882v338.824h169.412V1920H451.387c-82.447 0-161.506-36.141-214.701-99.388-43.934-51.953-67.652-116.33-67.652-182.965V282.353C169.034 126.494 295.528 0 451.387 0H1750.21Zm-338.823 1468.235H463.81c-89.223 0-166.136 59.86-179.576 140.047-1.242 9.036-2.259 18.07-2.259 27.106v2.26c0 40.658 13.553 77.928 40.659 109.552 32.753 38.4 79.059 59.859 128.753 59.859h960v-112.941H409.599v-112.942h1001.788v-112.94Zm225.882-1355.294H451.387c-92.725 0-169.412 75.67-169.412 169.412v1132.8c50.824-37.27 113.958-59.859 181.835-59.859h1173.46V112.941ZM1354.882 903.53v112.942H564.294V903.529h790.588Zm56.47-564.705v451.764H507.825V338.824h903.529Zm-112.94 112.94H620.765v225.883h677.647V451.765Z" fill-rule="evenodd"/>
+                </svg>
+                  Sources
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="admin_profile.html" style="color: black;">
+                  <svg fill="#000000" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,11A5,5,0,1,0,7,6,5.006,5.006,0,0,0,12,11Zm0-8A3,3,0,1,1,9,6,3,3,0,0,1,12,3ZM3,22V18a5.006,5.006,0,0,1,5-5h8a5.006,5.006,0,0,1,5,5v4a1,1,0,0,1-2,0V18a3,3,0,0,0-3-3H8a3,3,0,0,0-3,3v4a1,1,0,0,1-2,0Z"/></svg>
+                  Profile
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="admin_feedback.html" style="color: black;">
+                  <svg width="24" height="24" viewBox="0 0 1024 1024" class="icon"  version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M415.808 755.2L512 851.392 608.192 755.2H883.2V204.8H704V128h256v704h-320l-128 128-128-128H64V128h256v76.8H140.8v550.4h275.008zM473.6 64h76.8v448H473.6V64z m0 512h76.8v76.8H473.6V576z" fill="#000000" /></svg>
+                  Feedback
+                </a>
+              </li>
+            </ul>
+          </div>
+        
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 py-3 px-4">
+            <div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3">
+            </div>
+  
+            <section class="w-100 px-2 pb-3">
+
+                <div class="my-3 p-3 rounded shadow animate-card" style="background-color: #97adca; border: none;">
+                    <div class="d-flex justify-content-between" >
+                      <div><h4 class=" border-gray pb-2 mb-0">Chapter 1</h4></div>
+                      <div>
+                        <a href="admin_sources_algebra_book_chapter_1.html"><button type="button" class="btn btn-sm btn-primary">View</button></a>
+                        <button type="button" class="btn btn-sm btn-danger" onclick="confirmDelete(this)">Delete</button>
+                      </div>
+                    </div><br>
+                    <p>
+                        Chapter 1 introduces algebra basics with the Cartesian Coordinate system, linear equation graphs, and practical problem-solving for real-world applications.
+                    </p>
+                  </div>
+                  
+                  <div class="modal fade" id="deleteConfirmationModal" tabindex="-1" aria-labelledby="deleteConfirmationModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="deleteConfirmationModalLabel">Delete Confirmation</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          Are you sure you want to delete this chapter?
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                          <button type="button" class="btn btn-danger" onclick="deleteChapter()">Delete</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+             
+    
+              <div class="my-3 p-3 rounded shadow animate-card" style="background-color: #97adca; border: none;">
+                  <div class="d-flex justify-content-between" >
+                    <div><h4 class=" border-gray pb-2 mb-0">Chapter 2</h4></div>
+                    <div>
+                        <button type="button" class="btn btn-sm btn-primary" disabled>View</button>
+                        <button type="button" class="btn btn-sm btn-danger" disabled>delete</button>
+                    </div>
+                  </div><br>
+                  <p>Chapter 2 explores quadratic equations, covering root-finding, the discriminant, and practical applications.</p>
+                </div>
+    
+    
+                <div class="my-3 p-3 rounded shadow animate-card" style="background-color: #97adca; border: none;">
+                  <div class="d-flex justify-content-between" >
+                    <div><h4 class=" border-gray pb-2 mb-0">Chapter 3</h4></div>
+                    <div>
+                        <button type="button" class="btn btn-sm btn-primary" disabled>View</button>
+                        <button type="button" class="btn btn-sm btn-danger" disabled>delete</button>
+                    </div>
+                  </div><br>
+                  <p>Chapter 3 focuses on rational algebraic expressions, spanning fractions recall, definition, simplification, fundamental operations, complex expressions simplification, and solving equations involving rational algebraic expressions.
+                  </p>
+                </div>
+    
+    
+                <div class="my-3 p-3 rounded shadow animate-card" style="background-color: #97adca; border: none;">
+                  <div class="d-flex justify-content-between" >
+                    <div><h4 class=" border-gray pb-2 mb-0">Chapter 4</h4></div>
+                    <div>
+                        <button type="button" class="btn btn-sm btn-primary" disabled>View</button>
+                        <button type="button" class="btn btn-sm btn-danger" disabled>delete</button>
+                    </div>
+                  </div><br>
+                  <p>
+                    Chapter 4 explores variations, encompassing direct variation, direct square variation, inverse variation, and joint variation.</p>
+                </div>
+    
+    
+                <div class="my-3 p-3 rounded shadow animate-card" style="background-color: #97adca; border: none;">
+                  <div class="d-flex justify-content-between" >
+                    <div><h4 class=" border-gray pb-2 mb-0">Chapter 5</h4></div>
+                    <div>
+                       <button type="button" class="btn btn-sm btn-primary" disabled>View</button>
+                        <button type="button" class="btn btn-sm btn-danger" disabled>delete</button>
+                    </div>
+                  </div><br>
+                  <p>Chapter 5 delves into integral components, including positive integral exponents, zero and negative exponents, scientific notation, and the evaluation of exponential expressions using a calculator.</p>
+                </div>
+    
+                <div class="my-3 p-3 rounded shadow animate-card" style="background-color: #97adca; border: none;">
+                  <div class="d-flex justify-content-between" >
+                    <div><h4 class=" border-gray pb-2 mb-0">Chapter 6</h4></div>
+                    <div>
+                        <button type="button" class="btn btn-sm btn-primary" disabled>View</button>
+                        <button type="button" class="btn btn-sm btn-danger" disabled>delete</button>
+                    </div>
+                  </div><br>
+                  <p>Chapter 6 explores radical expressions, encompassing topics such as radicals, properties of radicals, simplifying radicals, operations with radicals, solving radical equations, and addressing problems involving radical equations.</p>
+                </div>
+  
+                <div class="my-3 p-3 rounded shadow animate-card" style="background-color: #97adca; border: none;">
+                  <div class="d-flex justify-content-between" >
+                    <div><h4 class=" border-gray pb-2 mb-0">Chapter 7</h4></div>
+                    <div>
+                        <button type="button" class="btn btn-sm btn-primary" disabled>View</button>
+                        <button type="button" class="btn btn-sm btn-danger" disabled>delete</button>
+                    </div>
+                    </div><br>
+                  <p>Chapter 7 delves into sequences and series, elucidating the meaning of sequences, arithmetic sequences, geometric sequences, arithmetic series, geometric series, and other specialized sequences. Additionally, the chapter introduces the binomial theorem.</p>
+                </div>
+
+                <div id="chapterContainer"></div>
+                
+            </section>
+            
+          
+          </main>
+      </div>
+    </div>
+
+   
+
+    <footer style="background-image: linear-gradient(to right, #0097B2 , #7ED957);">
+      <div class="container">
+          <div class="d-flex flex-wrap justify-content-between align-items-center py-4">
+            <div class="col-md-4 d-flex align-items-center">
+            </div>
+          </div>
+        </div>
+  </footer>
+
+  <script>
+    function logout() {
+      // Perform logout actions, e.g., clearing session, cookies, etc.
+  
+      // Use window.location.replace to replace the current URL with a new one
+      var newUrl = "index_bootsrap.html"; 
+      window.location.replace(newUrl);
+    }
+  </script>    
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+
+    
+
+<script>
+    function confirmDelete(button) {
+      // Show the delete confirmation modal
+      $('#deleteConfirmationModal').modal('show');
+  
+      // Store the card element in a global variable
+      window.cardToDelete = button.closest('.animate-card');
+    }
+  
+    function deleteChapter() {
+      // Close the delete confirmation modal
+      $('#deleteConfirmationModal').modal('hide');
+  
+      // Remove the stored card element
+      window.cardToDelete.remove();
+    }
+  </script>
+
+<script>
+    function addChapter() {
+        // Get input values from the modal
+        const titleInput = document.getElementById("chapterTitle");
+        const descriptionInput = document.getElementById("chapterDescription");
+
+        const title = titleInput.value.trim();
+        const description = descriptionInput.value.trim();
+
+        // Check if the input fields are not empty
+        if (!title || !description) {
+            alert("Please enter both chapter title and description.");
+            return;
+        }
+
+        // Create a new card element
+        const newCard = document.createElement("div");
+            newCard.className = "card my-3 col-lg-12 shadow border-0"; // Adjust column width as needed
+            newCard.style.backgroundColor = "#97adca";  // Your custom background color
+
+            const cardBody = document.createElement("div");
+            cardBody.className = "card-body d-flex justify-content-between align-items-center";
+
+            const titleElement = document.createElement("h4");
+            titleElement.className = "card-title";
+            titleElement.textContent = title;
+
+            const buttonsElement = document.createElement("div");
+            buttonsElement.className = "";
+            buttonsElement.innerHTML = `
+                <button type="button" class="btn btn-primary btn-sm" disabled>View</button>
+                <button type="button" class="btn btn-danger btn-sm" disabled>delete</button>
+            `;
+
+            const descriptionElement = document.createElement("p");
+            descriptionElement.className = "card-text p-3";
+            descriptionElement.textContent = description;
+
+            // Append elements
+            cardBody.appendChild(titleElement);
+            cardBody.appendChild(buttonsElement);
+            newCard.appendChild(cardBody);
+            newCard.appendChild(descriptionElement);
+
+            // Append the new card element to the container
+            const chapterContainer = document.getElementById("chapterContainer");
+            chapterContainer.appendChild(newCard);
+
+        // Close the modal using appropriate method
+        // Example for Bootstrap modal: $('#addChapterModal').modal('hide');
+
+        // Clear input fields
+        titleInput.value = "";
+        descriptionInput.value = "";
+    }
+</script>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="Animation.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>

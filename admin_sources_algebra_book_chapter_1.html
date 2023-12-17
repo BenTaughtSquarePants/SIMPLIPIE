@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMPLIPIE | Sources</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="shortcut icon" href="images-icons/π-removebg-preview-removebg-preview.png" type="image/x-icon">
+</head>
+
+<style>
+  #white-btn:hover {
+      transform: scale(1.2);
+      background-color: white;
+      border-color: white;
+  }
+  #feature:hover{
+    background-color: #0097B2;
+    border-radius: .5rem;
+  }
+
+ .navbar-nav .nav-item:hover .nav-link {
+  color: white;
+  }
+  .navbar-nav .nav-item:hover svg  {
+  fill: white;
+  }
+  .animate-card {
+    opacity: 0;
+    transition: opacity .75s ease;
+  }
+
+  .animate-card.show {
+      opacity: 1;
+  }
+
+  
+  #cardWithImage {
+      border-style: dashed;
+      border-width: 3px;
+      height: 300px; /* Adjust the height as needed */
+      background-position: center;
+      background-size: contain; /* Maintain aspect ratio without stretching */
+      background-repeat: no-repeat; /* Do not repeat the background image */
+      position: relative;
+      overflow: hidden; /* Ensure the background image does not overflow */
+    }
+
+    #cardWithText {
+      border-style: dashed;
+      border-width: 3px;
+      height: 300px; /* Adjust the height as needed */
+      background-position: center;
+      background-size: contain; /* Maintain aspect ratio without stretching */
+      background-repeat: no-repeat; /* Do not repeat the background image */
+      position: relative;
+      overflow: hidden; /* Ensure the background image does not overflow */
+    }
+
+    .card-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white; /* Adjust text color */
+    }
+    .card-overlay-1 {
+    position: absolute;
+    top: 0; /* Align to the top of the card */
+    left: 0; /* Align to the start of the card */
+    padding: 10px; /* Add some padding if needed */
+    color: black /* Adjust text color */}
+
+    .card-body canvas {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+    
+</style>
+
+<body style="background: #cdecec;">
+    
+  <header>
+    <nav class="navbar navbar-expand-lg" aria-label="Thirteenth navbar example" style="background-image: linear-gradient(to right, #0097B2 , #7ED957);">
+      <div class="container-fluid">
+        <img src="images-icons/π-removebg-preview-removebg-preview.png" class="img-fluid" width="50" height="50">
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-lg-flex justify-content-between" id="navbarsExample11">
+          <a class="navbar-brand col-lg-3 me-0 d-none d-lg-block" href="#"></a>
+          <ul class="navbar-nav d-lg-none col-lg-5 ps-2 pt-2 pb-3">
+            <li class="nav-item d-flex align-items-center">
+              <svg width="20" height="20" viewBox="0 0 15 15" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.5 0.5L7.8254 0.120372C7.63815 -0.0401239 7.36185 -0.0401239 7.1746 0.120372L7.5 0.5ZM0.5 6.5L0.174604 6.12037L0 6.27003V6.5H0.5ZM5.5 14.5V15C5.77614 15 6 14.7761 6 14.5H5.5ZM9.5 14.5H9C9 14.7761 9.22386 15 9.5 15V14.5ZM14.5 6.5H15V6.27003L14.8254 6.12037L14.5 6.5ZM1.5 15H5.5V14H1.5V15ZM14.8254 6.12037L7.8254 0.120372L7.1746 0.879628L14.1746 6.87963L14.8254 6.12037ZM7.1746 0.120372L0.174604 6.12037L0.825396 6.87963L7.8254 0.879628L7.1746 0.120372ZM6 14.5V11.5H5V14.5H6ZM9 11.5V14.5H10V11.5H9ZM9.5 15H13.5V14H9.5V15ZM15 13.5V6.5H14V13.5H15ZM0 6.5V13.5H1V6.5H0ZM7.5 10C8.32843 10 9 10.6716 9 11.5H10C10 10.1193 8.88071 9 7.5 9V10ZM7.5 9C6.11929 9 5 10.1193 5 11.5H6C6 10.6716 6.67157 10 7.5 10V9ZM13.5 15C14.3284 15 15 14.3284 15 13.5H14C14 13.7761 13.7761 14 13.5 14V15ZM1.5 14C1.22386 14 1 13.7761 1 13.5H0C0 14.3284 0.671573 15 1.5 15V14Z"/>
+              </svg>
+              <a class="nav-link active ps-1" href="admin.html" style="font-weight: 500;">Dashboard</a>
+            </li>
+            <li class="nav-item d-flex align-items-center">
+              <svg fill="#000000" width="20" height="20" viewBox="0 0 1920 1920"  xmlns="http://www.w3.org/2000/svg">
+                <path d="M1892.1 374.226 1517.874 0 1143.76 374.226l78.884 78.884 239.442-239.442v478.996c0 191.464-116.596 261.534-251.715 342.65-91.604 54.895-190.349 114.923-250.377 216.904-59.916-101.98-158.66-162.009-250.265-216.904-135.118-81.116-251.827-151.186-251.827-342.65V213.668L697.456 453.11l78.884-78.884L402.114 0 28 374.226l78.884 78.884 239.442-239.442v478.996c0 254.728 162.678 352.245 306.165 438.27 135.118 81.116 251.715 151.186 251.715 342.762V1920h111.576v-446.304c0-191.576 116.709-261.646 251.827-342.762 143.487-86.025 306.053-183.542 306.053-438.27V213.668l239.554 239.442 78.884-78.884Z" fill-rule="evenodd"/>
+              </svg>
+              <a class="nav-link active ps-1" href="admin_paths.html" style="font-weight: 500;">Paths</a>
+            </li>
+            <li class="nav-item d-flex align-items-center">
+              <svg fill="#000000" width="20" height="20" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1750.21 0v1468.235h-225.882v338.824h169.412V1920H451.387c-82.447 0-161.506-36.141-214.701-99.388-43.934-51.953-67.652-116.33-67.652-182.965V282.353C169.034 126.494 295.528 0 451.387 0H1750.21Zm-338.823 1468.235H463.81c-89.223 0-166.136 59.86-179.576 140.047-1.242 9.036-2.259 18.07-2.259 27.106v2.26c0 40.658 13.553 77.928 40.659 109.552 32.753 38.4 79.059 59.859 128.753 59.859h960v-112.941H409.599v-112.942h1001.788v-112.94Zm225.882-1355.294H451.387c-92.725 0-169.412 75.67-169.412 169.412v1132.8c50.824-37.27 113.958-59.859 181.835-59.859h1173.46V112.941ZM1354.882 903.53v112.942H564.294V903.529h790.588Zm56.47-564.705v451.764H507.825V338.824h903.529Zm-112.94 112.94H620.765v225.883h677.647V451.765Z" fill-rule="evenodd"/>
+            </svg>
+              <a class="nav-link active ps-1" href="admin_sources.html" style="font-weight: 500;">Sources</a>
+            </li>
+            <li class="nav-item d-flex align-items-center">
+              <svg fill="#000000" width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,11A5,5,0,1,0,7,6,5.006,5.006,0,0,0,12,11Zm0-8A3,3,0,1,1,9,6,3,3,0,0,1,12,3ZM3,22V18a5.006,5.006,0,0,1,5-5h8a5.006,5.006,0,0,1,5,5v4a1,1,0,0,1-2,0V18a3,3,0,0,0-3-3H8a3,3,0,0,0-3,3v4a1,1,0,0,1-2,0Z"/></svg>
+              <a class="nav-link active ps-1" href="admin_profile.html" style="font-weight: 500;">Profile</a>
+            </li>
+            <li class="nav-item d-flex align-items-center">
+              <svg width="20" height="20" viewBox="0 0 1024 1024" class="icon"  version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><path d="M415.808 755.2L512 851.392 608.192 755.2H883.2V204.8H704V128h256v704h-320l-128 128-128-128H64V128h256v76.8H140.8v550.4h275.008zM473.6 64h76.8v448H473.6V64z m0 512h76.8v76.8H473.6V576z" /></svg>
+              <a class="nav-link active ps-1" href="admin_feedback.html" style="font-weight: 500;">Feedback</a>
+            </li>
+          </ul>
+          <div class="d-lg-flex col-lg-4 justify-content-end">
+            <form class="me-lg-2 d-flex">
+              <input class="form-control" type="search" placeholder="Search" aria-label="Search" disabled>
+              <button class="btn btn-outline-light ms-2 me-4" type="submit" disabled>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg>
+              </button>
+              <button type="button" class="btn btn-light ms-lg-2" style="color: #7ED957;" id="white-btn" onclick="logout()">
+                Logout
+              </button>   
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-md-2 d-none d-md-block text-bg-light" id="sidebar">
+          <div class="sidebar-sticky">
+            <ul class="nav flex-column pt-3">
+              <li class="nav-item" >
+                <a class="nav-link active" href="admin.html" style="color: black;">
+                  <svg width="24" height="24" viewBox="0 0 15 15" fill="#000000" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.5 0.5L7.8254 0.120372C7.63815 -0.0401239 7.36185 -0.0401239 7.1746 0.120372L7.5 0.5ZM0.5 6.5L0.174604 6.12037L0 6.27003V6.5H0.5ZM5.5 14.5V15C5.77614 15 6 14.7761 6 14.5H5.5ZM9.5 14.5H9C9 14.7761 9.22386 15 9.5 15V14.5ZM14.5 6.5H15V6.27003L14.8254 6.12037L14.5 6.5ZM1.5 15H5.5V14H1.5V15ZM14.8254 6.12037L7.8254 0.120372L7.1746 0.879628L14.1746 6.87963L14.8254 6.12037ZM7.1746 0.120372L0.174604 6.12037L0.825396 6.87963L7.8254 0.879628L7.1746 0.120372ZM6 14.5V11.5H5V14.5H6ZM9 11.5V14.5H10V11.5H9ZM9.5 15H13.5V14H9.5V15ZM15 13.5V6.5H14V13.5H15ZM0 6.5V13.5H1V6.5H0ZM7.5 10C8.32843 10 9 10.6716 9 11.5H10C10 10.1193 8.88071 9 7.5 9V10ZM7.5 9C6.11929 9 5 10.1193 5 11.5H6C6 10.6716 6.67157 10 7.5 10V9ZM13.5 15C14.3284 15 15 14.3284 15 13.5H14C14 13.7761 13.7761 14 13.5 14V15ZM1.5 14C1.22386 14 1 13.7761 1 13.5H0C0 14.3284 0.671573 15 1.5 15V14Z"/>
+                  </svg>
+                  Dashboard
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="admin_paths.html" style="color: black;">
+                  <svg fill="#000000" width="24" height="24" viewBox="0 0 1920 1920"  xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1892.1 374.226 1517.874 0 1143.76 374.226l78.884 78.884 239.442-239.442v478.996c0 191.464-116.596 261.534-251.715 342.65-91.604 54.895-190.349 114.923-250.377 216.904-59.916-101.98-158.66-162.009-250.265-216.904-135.118-81.116-251.827-151.186-251.827-342.65V213.668L697.456 453.11l78.884-78.884L402.114 0 28 374.226l78.884 78.884 239.442-239.442v478.996c0 254.728 162.678 352.245 306.165 438.27 135.118 81.116 251.715 151.186 251.715 342.762V1920h111.576v-446.304c0-191.576 116.709-261.646 251.827-342.762 143.487-86.025 306.053-183.542 306.053-438.27V213.668l239.554 239.442 78.884-78.884Z" fill-rule="evenodd"/>
+                </svg>
+                  Paths
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="admin_sources.html">
+                  <svg fill="#0000FF" width="24" height="24" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1750.21 0v1468.235h-225.882v338.824h169.412V1920H451.387c-82.447 0-161.506-36.141-214.701-99.388-43.934-51.953-67.652-116.33-67.652-182.965V282.353C169.034 126.494 295.528 0 451.387 0H1750.21Zm-338.823 1468.235H463.81c-89.223 0-166.136 59.86-179.576 140.047-1.242 9.036-2.259 18.07-2.259 27.106v2.26c0 40.658 13.553 77.928 40.659 109.552 32.753 38.4 79.059 59.859 128.753 59.859h960v-112.941H409.599v-112.942h1001.788v-112.94Zm225.882-1355.294H451.387c-92.725 0-169.412 75.67-169.412 169.412v1132.8c50.824-37.27 113.958-59.859 181.835-59.859h1173.46V112.941ZM1354.882 903.53v112.942H564.294V903.529h790.588Zm56.47-564.705v451.764H507.825V338.824h903.529Zm-112.94 112.94H620.765v225.883h677.647V451.765Z" fill-rule="evenodd"/>
+                </svg>
+                  Sources
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="admin_profile.html" style="color: black;">
+                  <svg fill="#000000" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,11A5,5,0,1,0,7,6,5.006,5.006,0,0,0,12,11Zm0-8A3,3,0,1,1,9,6,3,3,0,0,1,12,3ZM3,22V18a5.006,5.006,0,0,1,5-5h8a5.006,5.006,0,0,1,5,5v4a1,1,0,0,1-2,0V18a3,3,0,0,0-3-3H8a3,3,0,0,0-3,3v4a1,1,0,0,1-2,0Z"/></svg>
+                  Profile
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="admin_feedback.html" style="color: black;">
+                  <svg width="24" height="24" viewBox="0 0 1024 1024" class="icon"  version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M415.808 755.2L512 851.392 608.192 755.2H883.2V204.8H704V128h256v704h-320l-128 128-128-128H64V128h256v76.8H140.8v550.4h275.008zM473.6 64h76.8v448H473.6V64z m0 512h76.8v76.8H473.6V576z" fill="#000000" /></svg>
+                  Feedback
+                </a>
+              </li>
+            </ul>
+          </div>
+        
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-6 pb-3 px-2">
+          <div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3"></div>
+          
+          
+
+          <section class="row">
+              <div class="container-fluid">
+
+                <!-- First Section -->
+                <section class="row p-1">
+                  <div class="col-lg-12">
+                    <div class="card" id="cardWithImage" style="background-color: #cdecec; border-style: dashed; border-width: 3px;">
+                      <div class="card-body d-flex align-items-center justify-content-center" style="height: 100%; padding: 20%;">
+                        <label class="btn btn-primary d-flex align-items-center justify-content-between shadow" style="width: 150px;">
+                          <input type="file" style="display: none;" accept="image/*" onchange="setBackground(event)">
+                          Thumbnail <svg fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" 
+                          width="15" height="15" viewBox="0 0 52 52" enable-background="new 0 0 52 52" xml:space="preserve">
+                          <path d="M30,29h16.5c0.8,0,1.5-0.7,1.5-1.5v-3c0-0.8-0.7-1.5-1.5-1.5H30c-0.6,0-1-0.4-1-1V5.5C29,4.7,28.3,4,27.5,4
+                            h-3C23.7,4,23,4.7,23,5.5V22c0,0.6-0.4,1-1,1H5.5C4.7,23,4,23.7,4,24.5v3C4,28.3,4.7,29,5.5,29H22c0.6,0,1,0.4,1,1v16.5
+                            c0,0.8,0.7,1.5,1.5,1.5h3c0.8,0,1.5-0.7,1.5-1.5V30C29,29.4,29.4,29,30,29z"/>
+                          </svg>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              
+                <!-- Second Section -->
+                <section class="row p-1">
+                  <div class="col-lg-12">
+                    <div class="card" id="cardWithText" style="background-color: #cdecec;">
+                      <div class="card-body d-flex flex-column align-items-center justify-content-between" style="height: 100%; padding: 10%;">
+                        <div class="card-overlay-1" id="cardOverlay" style="flex: 1; width: 100%; text-align: center;">
+                          <div class="d-flex flex-column pb-5" style="width: 100%; height: 100%;">
+                            <textarea style="background-color: #cdecec; resize:none;border: none; font-size: xx-large;" rows="3" class="form-control flex-grow-1 shadow" id="chapterTitleInput" placeholder="Chapter Title"></textarea>
+                          </div>
+                          <button type="button" class="btn btn-primary shadow" style="width: 150px;" onclick="submitFunctionChapterTitle()">
+                            <div class="d-flex align-items-center justify-content-between">Submit <svg fill="#FFFFFF" width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg" id="arrow">
+                              <path d="M8.29289 2.29289C8.68342 1.90237 9.31658 1.90237 9.70711 2.29289L14.2071 6.79289C14.5976 7.18342 14.5976 7.81658 14.2071 8.20711L9.70711 12.7071C9.31658 13.0976 8.68342 13.0976 8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929L11 8.5H1.5C0.947715 8.5 0.5 8.05228 0.5 7.5C0.5 6.94772 0.947715 6.5 1.5 6.5H11L8.29289 3.70711C7.90237 3.31658 7.90237 2.68342 8.29289 2.29289Z"/>
+                            </svg></div> </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                
+                <script>
+                  function setDropdownValue(value) {
+                    document.getElementById('dropdownInput').value = value;
+                  }
+                </script>
+                
+              
+                <!-- Third Section -->
+                <section class="row p-1">
+                  <div class="col-lg-12">
+                    <div class="card" id="cardWithText" style="background-color: #cdecec;">
+                      <div class="card-body d-flex flex-column align-items-center justify-content-between" style="height: 100%; padding: 10%;">
+                        <div class="card-overlay-1" id="cardOverlay" style="flex: 1; width: 100%; text-align: center;">
+                          <div class="d-flex flex-column pb-5" style="width: 100%; height: 100%;">
+                            <textarea style="background-color: #cdecec; resize:none;border: none; font-size:large;" rows="5" class="form-control flex-grow-1 shadow" id="descriptionInput" placeholder="Description"></textarea>
+                          </div>
+                          <button type="button" class="btn btn-primary shadow" style="width: 150px;" onclick="submitFunctionDescription()">
+                            <div class="d-flex align-items-center justify-content-between">Submit <svg fill="#FFFFFF" width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg" id="arrow">
+                              <path d="M8.29289 2.29289C8.68342 1.90237 9.31658 1.90237 9.70711 2.29289L14.2071 6.79289C14.5976 7.18342 14.5976 7.81658 14.2071 8.20711L9.70711 12.7071C9.31658 13.0976 8.68342 13.0976 8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929L11 8.5H1.5C0.947715 8.5 0.5 8.05228 0.5 7.5C0.5 6.94772 0.947715 6.5 1.5 6.5H11L8.29289 3.70711C7.90237 3.31658 7.90237 2.68342 8.29289 2.29289Z"/>
+                            </svg></div> </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <div id="contentSectionsContainer"></div>
+
+              
+                <!-- Fourth Section -->
+                <section class="row p-1">
+                  <div class="col-lg-12">
+                    <div class="card" style="background-color: #cdecec; border-style: dashed; border-width: 3px;">
+                      <div class="card-body d-flex align-items-center justify-content-center" style="height: 100%; padding: 10%;">
+                        <button type="button" class="btn btn-primary shadow" data-toggle="modal" data-target="#contentModal" style="width: 150px;">
+                          <div class="d-flex align-items-center justify-content-between">
+                            <span class="oi oi-star">Content</span>
+                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M7.5 1V14M1 7.5H14" stroke="#FFFFFF"/>
+                            </svg>
+                          </div>
+                        </button>
+                        
+                        <div class="modal fade" id="contentModal" tabindex="-1" role="dialog" aria-labelledby="contentModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="contentModalLabel">Enter Content Title</h5>
+                                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <input type="text" class="form-control" id="contentTitleInput" placeholder="Content Title">
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" onclick="addContentSection()">Add Section</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              
+              </div>
+            </section>
+       </main>
+
+       <section class="col-md-9 col-lg-4 p-0 shadow bg-light">
+        <div class="p-4">
+          
+          <div class="card mb-3 text-center shadow p-2" style="border: none;">
+            <h4>Preview</h4>
+          </div>
+
+          <div id="thumbnailCard" class="card mb-3 shadow" style="border: none;background-color: #6886ad;" >
+              <img class="card-img-top" id="selectedImage" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAA1BMVEX///+nxBvIAAAAR0lEQVR4nO3BAQ0AAADCoPdPbQ8HFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPBgxUwAAU+n3sIAAAAASUVORK5CYII=" alt="Card image cap">
+              <div class="card-body">
+                <h2 id="Chapter-title" class="card-title">(Chapter Title)</h2>
+                <p id="description" class="card-text">(Description)</p>
+              </div>
+            </div>
+            
+            <div id="accordion" class="pb-4">
+
+              <div class="card">
+                <div class="card-header d-flex justify-content-between" id="headingOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  <h5 class="mb-0">
+                    Lesson 1.1: The Cartesian Coordinate System
+                  </h5>
+                </button>
+                <svg data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" fill="#000000" width="24" height="24" viewBox="0 -6 524 524" xmlns="http://www.w3.org/2000/svg" ><title>down</title><path d="M64 191L98 157 262 320 426 157 460 191 262 387 64 191Z" /></svg>
+                </div>
+            
+                <div id="collapseOne" class=" collapse" aria-labelledby="headingOne" data-bs-parent="#accordion">
+                  <div class="card-body p-4">
+                    The <b>Cartesian Coordinate System</b> is a powerful tool in mathematics that helps us locate and describe points in a two-dimensional space. Named after the French mathematician René Descartes, this system provides a grid-like framework for pinpointing positions and visualizing relationships between numbers.
+                    <br><br>
+                    <b>Key Concepts:</b>
+                    <br><br>
+                    <b>Coordinates</b>
+                    <br><br>
+                    <ul>
+                      <li>The Cartesian Plane consists of two perpendicular lines – the x-axis and the y-axis – creating four quadrants (I, II, III, and IV).</li>
+                      <div class="text-center py-3"><img height="400" width="400" src="images-icons/Algebra_chapter_1_img/cartesian_1.jpg" alt="" class="img-fluid"></div>
+                      <li>Each point on the plane has a unique pair of coordinates (x, y), where 'x' represents the horizontal distance from the origin (along the x-axis), and 'y' represents the vertical distance (along the y-axis).</li>
+                      <div class="text-center py-3"><img height="400" width="400" src="images-icons/Algebra_chapter_1_img/cartesian_3.png" alt="" class="img-fluid"></div>
+                    </ul>
+                    <b>The Origin (0, 0)</b><br><br>
+                    <ul>
+                      <li>The point where the x-axis and y-axis intersect is called the origin. It has coordinates (0, 0).</li>
+                      <div class="text-center py-3"><img height="400" width="400" src="images-icons/Algebra_chapter_1_img/cartesian_2.png" alt="" class="img-fluid"></div>
+                      <li>All other points are located with reference to this origin.</li>
+                      <div class="text-center py-3"><img height="400" width="400" src="images-icons/Algebra_chapter_1_img/cartesian_4.png" alt="" class="img-fluid"></div>
+                    </ul>
+                    <b>Positive and Negative Coordinates</b><br><br>
+                    <ul>
+                      <li>Moving right from the origin along the x-axis increases the x-coordinate (positive values).</li>
+                      <div class="text-center py-3"><img height="400" width="400" src="images-icons/Algebra_chapter_1_img/cartesian_5.png" alt="" class="img-fluid"></div>
+                      <li>Moving left along the x-axis decreases the x-coordinate (negative values).</li>
+                      <div class="text-center py-3"><img height="400" width="400" src="images-icons/Algebra_chapter_1_img/cartesian_6.png" alt="" class="img-fluid"></div>
+                      <li>Moving up along the y-axis increases the y-coordinate (positive values).</li>
+                      <div class="text-center py-3"><img height="400" width="400" src="images-icons/Algebra_chapter_1_img/cartesian_7.png" alt="" class="img-fluid"></div>
+                      <li>Moving down along the y-axis decreases the y-coordinate (negative values).</li>
+                      <div class="text-center py-3"><img height="400" width="400" src="images-icons/Algebra_chapter_1_img/cartesian_8.png" alt="" class="img-fluid"></div>
+                    </ul><hr>
+                    <b>Conclusion</b><br><br>
+                    <p>The Cartesian Coordinate System is a valuable tool for describing and visualizing positions in mathematics. By understanding coordinates and the grid system, we can easily represent and interpret relationships between different points in a two-dimensional space. This system serves as the foundation for various mathematical concepts, including graphing equations, geometry, and more.
+                      <br><br>
+                      Remember, the x-axis is like a horizontal road, and the y-axis is like a vertical road. The coordinates tell us how far we need to travel along each road to reach a specific point. With this knowledge, you can navigate the Cartesian Plane with confidence!</p>
+                  </div>
+                </div>
+
+              
+
+              <div class="card">
+                <div class="card-header d-flex justify-content-between" id="headingTwo" >
+                  <button class="accordion-button collapsed"  type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <h5 class="mb-0">
+                    Lesson 1.2: Graph of Linear Equations in Two Variables
+                  </h5>
+                </button>
+                <svg data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" fill="#000000" width="24" height="24" viewBox="0 -6 524 524" xmlns="http://www.w3.org/2000/svg" ><title>down</title><path d="M64 191L98 157 262 320 426 157 460 191 262 387 64 191Z" /></svg>
+                </div>
+                <div id="collapseTwo" class=" collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion">
+                  <div class="card-body p-4">
+                    In this lesson, we will delve into the concept of linear equations in two variables and explore how these equations manifest as lines on a coordinate plane. This understanding is foundational to graphing equations and gaining insights into their behavior.
+                    <br><br>
+                    <b>Key Concepts:</b>
+                    <br><br>
+                    <b>Variables x and y</b>
+                    <br><br>
+                    <ul>
+                      <li>In the realm of equations, 'x' and 'y' are our independent and dependent variables, respectively. They are integral to describing relationships between quantities.</li>
+                      <div class="text-center py-3"><img height="400" width="400" src="images-icons/Algebra_chapter_1_img/cartesian_12.png" alt="" class="img-fluid"></div>
+                    </ul>
+                    <b>Equation Format: y = mx + b</b><br><br>
+                    <ul>
+                      <li>Linear equations take the form of y = mx + b, where 'm' represents the slope of the line and 'b' signifies the y-intercept, the point where the line intersects the y-axis.</li>
+                      <div class="text-center py-3"><img height="400" width="400" src="images-icons/Algebra_chapter_1_img/cartesian_11.png" alt="" class="img-fluid"></div>
+                    </ul>
+                    <b>Graphical Representation</b><br><br>
+                    <ol>
+                      <li><b>y = 2x + 3</b></li>
+                      <div class="text-center py-3"><img height="400" width="400" src="images-icons/Algebra_chapter_1_img/cartesian_9.png" alt="" class="img-fluid"></div>
+                      <p class="py-3">The slope 'm' is 2, indicating a rise of 2 units for every run of 1 unit. The y-intercept 'b' is 3, placing the line's starting point at (0, 3).</p>
+                      <li><b>y = (-1/2)x + 2</b></li>
+                      <div class="text-center py-3"><img height="400" width="400" src="images-icons/Algebra_chapter_1_img/cartesian_10.png" alt="" class="img-fluid"></div>
+                      <p class="py-3">The slope 'm' is -1/2, indicating a descent of 1 unit for every run of 2 units. The y-intercept 'b' is 2, marking the starting point at (0, 2).</p>
+                    </ol><hr>
+                    <b>Conclusion</b><br><br>
+                    <p>By understanding the principles of linear equations in two variables and mastering graphical representation, you've built a solid foundation for tackling advanced mathematical concepts. 
+                      <br><br>
+                      Your proficiency in graphing equations opens doors to exploring more intricate mathematical ideas. Continue refining your skills, and delve deeper into the fascinating narratives that unfold on the coordinate plane. Happy exploring!</p>
+                  </div>
+                  </div>
+                </div>
+                
+                
+              
+            
+          </div>
+          </div>
+
+          <div class="card mb-3">
+            <div class="input-group">
+              <input type="text" class="form-control" id="dropdownInput" placeholder="Select Path">
+              <!-- Dropdown menu -->
+              <div class="input-group-append">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Path
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" onclick="setDropdownValue('Beginner')">Beginner</a>
+                  <a class="dropdown-item" onclick="setDropdownValue('Novice')">Novice</a>
+                  <a class="dropdown-item" onclick="setDropdownValue('Intermediate')">Intermediate</a>
+                  <a class="dropdown-item" onclick="setDropdownValue('Advanced')">Advanced</a>
+                  <a class="dropdown-item" onclick="setDropdownValue('Expert')">Expert</a>
+                  <a class="dropdown-item" onclick="setDropdownValue('Master')">Master</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-center">
+            <div class="card mb-3 text-center pe-1" style="border: none; width:200px;">
+              <button class="btn btn-primary shadow" onclick="saveChapter()">Save</button>
+            </div>
+  
+            <div class="card mb-3 text-center ps-1" style="border: none;width:200px;">
+              <button class="btn btn-success shadow" onclick="publishChapter()">Publish</button>
+            </div>
+          </div>
+          
+
+        </div>
+      </section>
+      
+      </div>
+    
+    </div>
+
+   
+
+    <footer style="background-image: linear-gradient(to right, #0097B2 , #7ED957);">
+      <div class="container">
+          <div class="d-flex flex-wrap justify-content-between align-items-center py-4">
+            <div class="col-md-4 d-flex align-items-center">
+            </div>
+          </div>
+        </div>
+  </footer>
+
+  <script>
+    function publishChapter() {
+      alert('Chapter published!');
+    }
+
+    function saveChapter() {
+      alert('Chapter saved!');
+    }
+
+  </script>
+
+<script>
+  function logout() {
+    // Perform logout actions, e.g., clearing session, cookies, etc.
+
+    // Use window.location.replace to replace the current URL with a new one
+    var newUrl = "index_bootsrap.html"; 
+    window.location.replace(newUrl);
+  }
+</script>    
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+
+  
+  
+<script>
+  function setBackground(event) {
+    const card = document.getElementById('cardWithImage');
+    const fileInput = event.target;
+    const selectedImage = document.getElementById('selectedImage');
+
+    if (fileInput.files && fileInput.files[0]) {
+      const reader = new FileReader();
+
+      reader.onload = function(e) {
+        card.style.backgroundImage = `url(${e.target.result})`;
+        selectedImage.src = e.target.result;
+      };
+
+      reader.readAsDataURL(fileInput.files[0]);
+    }
+  }
+
+</script>
+
+<script>
+  function uploadFile(input, title) {
+    // Get the file information
+    const fileName = input.files[0].name;
+
+    // Create a link to the file
+    const fileLink = document.createElement('a');
+    fileLink.href = URL.createObjectURL(input.files[0]);
+    fileLink.target = '_blank';
+    fileLink.textContent = fileName;
+
+    // Update the card body with the link to the file
+    const sanitizedId = sanitizeId(title);
+    const accordionItem = document.querySelector(`#accordion .accordion-item#heading${sanitizedId}`);
+    const cardBodyElement = accordionItem.querySelector('.card-body');
+
+    // Clear existing content
+    cardBodyElement.innerHTML = '';
+
+    // Append the link to the accordion body
+    cardBodyElement.appendChild(fileLink);
+
+    // If the file is a PDF, display it using PDF.js
+    if (fileName.toLowerCase().endsWith('.pdf')) {
+      displayPdf(fileLink.href, cardBodyElement);
+    }
+  }
+
+  function sanitizeId(title) {
+    // Remove special characters and replace spaces with underscores
+    return title.replace(/[^\w\s]/gi, '').replace(/\s+/g, '_');
+  }
+
+  function displayPdf(pdfUrl, container) {
+    // Create a container for the PDF viewer
+    const pdfContainer = document.createElement('div');
+    pdfContainer.className = 'pdf-viewer';
+    container.appendChild(pdfContainer);
+
+    // Fetch the PDF file
+    const loadingTask = pdfjsLib.getDocument(pdfUrl);
+
+    // Render the PDF file
+    loadingTask.promise.then((pdf) => {
+      for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber++) {
+        pdf.getPage(pageNumber).then((page) => {
+          const scale = 1.5;
+          const viewport = page.getViewport({ scale });
+
+          // Create a canvas for each page
+          const canvas = document.createElement('canvas');
+          const context = canvas.getContext('2d');
+          canvas.height = viewport.height;
+          canvas.width = viewport.width;
+          pdfContainer.appendChild(canvas);
+
+          // Render PDF page into canvas
+          const renderContext = {
+            canvasContext: context,
+            viewport: viewport,
+          };
+          const renderTask = page.render(renderContext);
+          renderTask.promise.then(() => {
+            // Page rendered
+          });
+        });
+      }
+    });
+  }
+
+  function submitFunctionDescription() {
+    const descriptionInput = document.getElementById('descriptionInput').value;
+
+    // Update the content of the target card title
+    const targetCardDescription = document.getElementById('description');
+    targetCardDescription.textContent = `${descriptionInput}`;
+
+    // Optionally, close the modal if you have one
+    $('#textModal').modal('hide');
+  }
+
+  function submitFunctionChapterTitle() {
+    const chapterTitleInput = document.getElementById('chapterTitleInput').value;
+
+    // Update the content of the target card title
+    const targetCardchapterTitle = document.getElementById('Chapter-title');
+    targetCardchapterTitle.textContent = `${chapterTitleInput}`;
+
+    // Optionally, close the modal if you have one
+    $('#textModal').modal('hide');
+  }
+
+  function deleteContentSection(button) {
+    // Find the parent section
+    const sectionToRemove = button.closest('.row');
+
+    // Find the corresponding accordion item
+    const contentTitle = sectionToRemove.querySelector('h4').textContent;
+    const sanitizedId = sanitizeId(contentTitle);
+    const accordionItemToRemove = document.querySelector(`#accordion .accordion-item#heading${sanitizedId}`);
+
+    // Remove the section and the accordion item
+    sectionToRemove.remove();
+    accordionItemToRemove.remove();
+  }
+
+  function addAccordionItem(title) {
+    // Sanitize the title for use as an id
+    const sanitizedId = sanitizeId(title);
+
+    // Create a new accordion item
+    const newAccordionItem = document.createElement('div');
+    newAccordionItem.className = 'accordion-item';
+    newAccordionItem.id = `heading${sanitizedId}`;
+
+    newAccordionItem.innerHTML = `
+      <div class="card">
+        <div class="card-header d-flex justify-content-between" id="heading${sanitizedId}">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${sanitizedId}" aria-expanded="false" aria-controls="collapse${sanitizedId}">
+            <h5 class="mb-0">${title}</h5>
+          </button>
+          <svg data-bs-toggle="collapse" data-bs-target="#collapse${sanitizedId}" aria-expanded="false" aria-controls="collapse${sanitizedId}" fill="#000000" width="24" height="24" viewBox="0 -6 524 524" xmlns="http://www.w3.org/2000/svg">
+            <title>down</title>
+            <path d="M64 191L98 157 262 320 426 157 460 191 262 387 64 191Z" />
+          </svg>
+        </div>
+        <div id="collapse${sanitizedId}" class="collapse" aria-labelledby="heading${sanitizedId}" data-bs-parent="#accordion">
+          <div class="card-body p-4">
+            <!-- PDF content will be displayed here -->
+          </div>
+        </div>
+      </div>
+    `;
+
+    // Append the new accordion item to the accordion
+    document.getElementById('accordion').appendChild(newAccordionItem);
+  }
+
+  function addContentSection() {
+    // Get the entered content title from the modal input
+    const contentTitleInput = document.getElementById('contentTitleInput').value;
+
+    // Create a new content section
+    const newSection = document.createElement('section');
+    newSection.className = 'row p-1';
+    newSection.innerHTML = `
+      <div class="col-lg-12">
+        <div class="card" style="background-color: #cdecec; border-style: dashed; border-width: 3px;">
+          <div class="card-body d-flex flex-column align-items-center justify-content-center" style="height: 100%; padding: 10%;">
+            <h4>${contentTitleInput}</h4>
+            <!-- Content Button -->
+            <input id="fileInput_${sanitizeId(contentTitleInput)}" type="file" style="display: none;" accept="application/pdf" onchange="uploadFile(this, '${contentTitleInput}');">
+            <div class="btn-group mt-2 shadow">
+              <button type="button" class="btn btn-primary" onclick="document.getElementById('fileInput_${sanitizeId(contentTitleInput)}').click();">Upload</button>
+              <button type="button" class="btn btn-danger" onclick="deleteContentSection(this);">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+
+    // Append the new content section to the container
+    document.getElementById('contentSectionsContainer').appendChild(newSection);
+
+    // Add the accordion item
+    addAccordionItem(contentTitleInput);
+
+    // Close the modal
+    $('#contentModal').modal('hide');
+  }
+</script>
+
+<script>
+  
+  function setDropdownValue(value) {
+    document.getElementById('dropdownInput').value = value;
+    const path = document.getElementById('dropdownInput').value;
+    if (path === 'Beginner') {
+      document.getElementById('thumbnailCard').style.backgroundColor = '#c3f1bf';
+    }
+    else if(path === 'Novice'){
+      document.getElementById('thumbnailCard').style.backgroundColor = '#b7b7ee';
+    }
+    else if(path === 'Intermediate'){
+      document.getElementById('thumbnailCard').style.backgroundColor = '#eceac5';
+    }
+    else if(path === 'Advanced'){
+      document.getElementById('thumbnailCard').style.backgroundColor = '#eec9ad';
+    }
+    else if(path === 'Expert'){
+      document.getElementById('thumbnailCard').style.backgroundColor = '#f7b9b5';
+    }
+    else if(path === 'Master'){
+      document.getElementById('thumbnailCard').style.backgroundColor = 'rgb(241, 160, 156)';
+    }
+    else{
+      window.alert('Invalid Input!')
+    }
+  }
+</script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.8.335/pdf.min.js"></script>
+  <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="Animation.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>
